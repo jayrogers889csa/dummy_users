@@ -1,0 +1,8 @@
+<h2>You have successfully logged out!</h2>
+
+
+<h3><a href="/">Home</a></h3>
+
+<%if session[:id] == nil%>
+  <h3><a href="/log_in">Log In</a>
+<%end%>

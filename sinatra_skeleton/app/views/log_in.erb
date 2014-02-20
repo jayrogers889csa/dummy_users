@@ -1,0 +1,28 @@
+ <h1>Log In</h1>
+
+<%if session[:id] == nil %>
+  <p>Please log your user credentials and click submit!<p>
+
+  <form method="POST" action="/verify_account">
+    Login:
+    <br>
+    <br>
+    Email: <input type="text" name="post[email]">
+    <br>
+    <br>
+    Password: <input type="text" name="post[password]">
+    <br>
+    <br>
+    <input type="submit">
+  </form>
+<%else%>
+    <h2> You are already logged in!</h2>
+<%end%>
+
+  <h3><a href="/">Home</a></h3>
+
+    <%if session[:id] != nil%>
+  <h3><a href="/log_out">Log Out</a>
+    <%end%>
+
+

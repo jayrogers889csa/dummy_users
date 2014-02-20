@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Welcome to Dummy Users!</h1>
+  <br>
+  <p>Please <a href="/log_in">log-in</a> or <a href="/create_new_account"> click here </a> to create a new account!<p>
+  <br>
+  <p>You may also view secret files by <a href="/view_secret_file">clicking here<a> if you are already logged in!</p>
+
+</div>
+
+  <%if session[:id] != nil%>
+    <h3><a href="/log_out">Log Out</a>
+  <%end%>
